@@ -11,21 +11,14 @@ namespace ConsoleApp1
     {
         public static void Main(string[] args)
         {
+            //output should be gooog for "abcagooogtech"
+            string output = Palindrome.GetLongestPalindrome("abcagooogtech");
 
-            Arrays.printUniquePairsUsingHashtable(new int[] { 2, 4, 7, 5, 9, 10, -1 }, 9);
-
+            //Arrays.printUniquePairsUsingHashtable(new int[] { 2, 4, 7, 5, 9, 10, -1 }, 9); 
         }
-	}
+    }
 
-// A simple C# program to introduce a linked list 
-
-
-	// This code has been contributed by 29AjayKumar 
-
-
-
-
-
-
+    // A simple C# program to introduce a linked list   
+    // This code has been contributed by 29AjayKumar  
 }
 
