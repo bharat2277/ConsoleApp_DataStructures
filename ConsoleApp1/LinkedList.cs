@@ -72,6 +72,7 @@ namespace ConsoleApp1
                 }
             }
 
+            //logic starts here
             int carry = 0, temp = 0;
             for (int i = 0; i < maxCount; ++i)
             {
