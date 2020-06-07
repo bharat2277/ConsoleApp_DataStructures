@@ -28,6 +28,25 @@ namespace ConsoleApp1
             Add_Two_Numbers_Represented_By_Linked_Lists.Execute();
 
 
+            LinkedList list = new LinkedList();
+            list.AddNode(new LinkedList.Node(85));
+            list.AddNode(new LinkedList.Node(15));
+            list.AddNode(new LinkedList.Node(4));
+            list.AddNode(new LinkedList.Node(20));
+
+            // List before reversal 
+            Console.WriteLine("===============================");
+            Console.WriteLine("Given linked list:");
+            list.PrintList();
+
+            // Reverse the list 
+            list.ReverseList();
+
+            // List after reversal 
+            Console.WriteLine("Reversed linked list:");
+            list.PrintList();
+            Console.WriteLine("===============================");
+
             Console.ReadKey();
         }
     }

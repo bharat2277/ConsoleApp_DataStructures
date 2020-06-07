@@ -8,10 +8,12 @@ namespace ConsoleApp1
     {
         public static void Execute()
         {
+            Console.WriteLine("===============================");
             foreach (var item in FibonacciSequence.GenerateFibonacis(10))
-            { 
-                Console.WriteLine(item);
+            {
+                Console.Write(item + " ");
             }
+            Console.WriteLine("===============================");
         }
 
         //1 1 2 3 5 8 13 21 34 55 

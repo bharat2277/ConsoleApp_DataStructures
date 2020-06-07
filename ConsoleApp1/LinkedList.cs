@@ -7,7 +7,7 @@ namespace ConsoleApp1
 {
     public class LinkedList
     {
-        public Node head; // head of list 
+        public Node root; // head of list 
 
         /* Linked list Node. This inner class is made static so that 
 		main() can access it */
@@ -21,7 +21,54 @@ namespace ConsoleApp1
                 next = null;
             } // Constructor 
         }
-        /* method to create a simple linked list with 3 nodes*/ 
+
+        /* method to create a simple linked list with 3 nodes*/
+        // function to add a new node at 
+        // the end of the list 
+        public void AddNode(Node node)
+        {
+            if (root == null)
+                root = node;
+            else
+            {
+                Node temp = root;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+        }
+
+
+        // function to reverse the list 
+        public void ReverseList()
+        {
+            Node p = root;  
+            Node n = null;
+
+            while (p != null)
+            {
+                Node tmp = p.next;
+
+                p.next = n;
+                n = p;
+                p = tmp;  
+            }
+            root = n;
+        }
+
+        // function to print the list data 
+        public void PrintList()
+        {
+            Node current = root;
+            while (current != null)
+            {
+                Console.Write(current.data + " ");
+                current = current.next;
+            }
+            Console.WriteLine();
+        }
     }
 
     public class Add_Two_Numbers_Represented_By_Linked_Lists
@@ -36,7 +83,8 @@ namespace ConsoleApp1
 
         public static void Execute()
         {
-            Console.WriteLine("Add_Two_Numbers_Represented_By_Linked_Lists");
+            Console.WriteLine("===============================");
+            Console.WriteLine("Add_Two_Numbers_Represented_By_Linked_Lists:75946+84=?");
             LinkedList<int> ll1 = new LinkedList<int>();
             ll1.AddLast(7);
             ll1.AddLast(5);
@@ -85,6 +133,8 @@ namespace ConsoleApp1
             {
                 Console.Write(item);
             }
+
+            Console.WriteLine("===============================");
         }
-    } 
+    }
 }
